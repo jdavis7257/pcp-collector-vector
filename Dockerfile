@@ -2,7 +2,7 @@ FROM ubuntu:trusty
 MAINTAINER John Davis
 
 RUN apt-get update &&\
-    apt-get install -y curl supervisor &&\
+    apt-get install -y curl apt-transport-https supervisor &&\
     curl 'https://bintray.com/user/downloadSubjectPublicKey?username=pcp' | sudo apt-key add - &&\
     echo "deb https://dl.bintray.com/pcp/trusty trusty main" | sudo tee -a /etc/apt/sources.list &&\
     apt-get update &&\
